@@ -11,10 +11,12 @@ import Cocoa
 import UIKit
 #endif
 
+//At this enum add all of AppLanguages
 enum AppLanguages:String {
   case en
 }
 
+//At this enum add .strings files to search localizations
 enum AppLanguageFiles:String {
   case Localization
 }
@@ -37,7 +39,7 @@ class Localization {
     }
     
     self.bundle = Bundle(path: path)
-    UserDefaults.standard.set("en", forKey: "application-language")
+    UserDefaults.standard.set(language.rawValue, forKey: "application-language")
   }
   
   static func getUsingLanguage() -> String? {
