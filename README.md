@@ -2,9 +2,16 @@
 You can copy and paste this folder to easily using of localization in your application
 # How to use
 <b>All configuration files contains inside Localization.swift</b>
+<b>For generate keys use:
+```python
+#Required: --input_strings_directory - input directory path.
+#Optional: --output_key_path directory/LocalizationKeys.swift - output keys to your file.
+python3 LocalizationsKeyGeneration.py --input_strings_directory /USER/directory/
+```
+</b>
 
 ## Feature
-- [ ] Add script to generate LocalizationKeys
+- [x] Add script to generate LocalizationKeys
 
 ## Add localization key
 Use <b>LocalizationKeys.swift</b> file to add new key of your localizations
