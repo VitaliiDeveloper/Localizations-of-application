@@ -4,22 +4,24 @@ You can copy and paste this folder to easily using of localization in your appli
 <b>All configuration files contains inside Localization.swift</b>
 <b>For generate keys use:
 ```python
-#Required: --input_strings_directory - input directory path.
-#Optional: --output_key_path directory/LocalizationKeys.swift - output keys to your file.
-python3 LocalizationsKeyGeneration.py --input_strings_directory /USER/directory/
+
+# Required: --input_strings_directory. #It's gonna be your direcetory of .lproj files or localization directorys, anyway script looking for .lproj files in directorys
+
+# Optional: --output_key_path directory/LocalizationKeys.swift # output keys to your file.
+
+# For Example
+
+python3 "$(pwd)/EasyLocalizationAppExample/LocalizationManager/LocalizationsKeyGeneration.py" --input_strings_directory "$(pwd)/EasyLocalizationAppExample/Localizations/" --output_key_path "$(pwd)/EasyLocalizationAppExample/LocalizationManager/LocalizationKeys.swift"
 ```
 </b>
 
 ## Feature
 - [x] Add script to generate LocalizationKeys
+- [x] Manager for loading any localization in Bundle
 
 ## Add localization key
-Use <b>LocalizationKeys.swift</b> file to add new key of your localizations
-```swift
-enum LocalizationKeys:String {
-    case errorPasswordEnter
-}
-```
+### All genereted keys storing in this file <b>LocalizationKeys.swift</b>
+
 ## Set new languages as default
 ```swift
 Localization.set(language: .en)

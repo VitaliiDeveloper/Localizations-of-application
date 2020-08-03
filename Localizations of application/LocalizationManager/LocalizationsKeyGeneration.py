@@ -25,14 +25,14 @@ def main():
     regularExp = []
     for filePath in listOfFiles:
         fileStrings = open(filePath, "r+")
-        regularExp = set(regularExp + re.findall("\"[\\w+\\W+]?[^=]*\"\\s*?=\\s*?\"[\\w+\\W+]?[^=]*\";", fileStrings.read()))
+        regularExp += re.findall("\"[\\w+\\W+]?[^=]*\"\\s*?=\\s*?\"[\\w+\\W+]?[^=]*\";", fileStrings.read())
     
-    keysList = []
+    keysList = set()
     for string in regularExp:
         stringSplit = string.split("=")
         key = find_between(stringSplit[0], "\"", "\"")
         #value = find_between(stringSplit[1], "\"", "\"")
-        keysList.append("%s" % key)
+        keysList.add("%s" % key)
 
     keyPath = "" 
     if not args.output_key_path:
