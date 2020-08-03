@@ -1,8 +1,12 @@
 # Localizations-of-application
-You can copy and paste this folder to easily using of localization in your application
+
+You can copy and paste **LocalizationManager** folder to easily using of localization in your application. For more details seeing **Example** folder
+
 # How to use
+
 <b>All configuration files contains inside Localization.swift</b>
-<b>For generate keys use:
+
+<b>For generate keys use script in Build Phases ( it's more comfortable to generate new keys every time on new cleaned build ):
 ```python
 
 # Required: --input_strings_directory. #It's gonna be your direcetory of .lproj files or localization directorys, anyway script looking for .lproj files in directorys
