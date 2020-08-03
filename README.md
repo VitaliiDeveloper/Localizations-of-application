@@ -1,6 +1,8 @@
 # Localizations-of-application
 
-You can copy and paste **LocalizationManager** folder to easily using of localization in your application. For more details seeing **Example** folder
+You can copy and paste **LocalizationManager** folder to easily using of localization in your application. For more details seeing **Example** folder.
+
+## But of course you can use iString for easy CRUD manipulation with application localizations
 
 # How to use
 
